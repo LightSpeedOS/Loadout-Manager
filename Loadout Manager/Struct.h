@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+#include "Includes.h"
 
 using namespace std;
 
@@ -35,20 +35,6 @@ struct Weapon
 	int range;
 	int fireRate;
 
-	inline void displayerStats()
-	{
-		space();
-		cout << "======Weapon Stats ======" << endl;
-		space();
-
-		cout << "Agility: " << agility << endl;
-		cout << "Handling: " << handling << endl;
-		cout << "Accuracy: " << accuracy << endl;
-		cout << "Range: " << range << endl;
-		cout << "Fire Rate: " << fireRate << endl;
-	}
-
-
 	inline void display()
 	{
 		space();
@@ -59,6 +45,22 @@ struct Weapon
 		cout << "Weapon Type: " << type << endl;
 		cout << name << " Damage: " << damage << endl;
 		cout << "Attactment Slots: " << slots << endl;
+		space();
+	}
+
+	inline void displayStats()
+	{
+		space();
+		cout << "======Weapon Stats ======" << endl;
+		space();
+
+		cout << "Agility: " << agility << endl;
+		cout << "Handling: " << handling << endl;
+		cout << "Accuracy: " << accuracy << endl;
+		cout << "Range: " << range << endl;
+		cout << "Fire Rate: " << fireRate << endl;
+
+		getKey();
 	}
 };
 

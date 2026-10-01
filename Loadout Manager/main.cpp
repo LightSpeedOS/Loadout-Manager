@@ -18,6 +18,6 @@ auto main() -> int
 	setUpWeapons(weapons);
 	setUpAttachments(attachments);
 
-	browseWeapons(weapons, weapon)
+	browseWeapons(weapons);
 
 }

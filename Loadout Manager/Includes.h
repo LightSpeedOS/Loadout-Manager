@@ -34,7 +34,7 @@ inline void space()
 inline void getKey()
 {
 	space();
-	cout << "[!] Press any key to reutnr" << endl;
+	cout << "[!] Press any key to return." << endl;
 	_getch();
 }
 

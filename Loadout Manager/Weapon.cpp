@@ -5,7 +5,6 @@ void setUpWeapons(vector<Weapon>& weapons)
 {
 
 	// Sub Machine Guns
-
 	Weapon iso;
 	iso.name = "Iso Nightside";
 	iso.type = "SMG";
@@ -33,7 +32,6 @@ void setUpWeapons(vector<Weapon>& weapons)
 	weapons.push_back(c9);
 
 	// Assault Rifles
-
 	Weapon an94;
 	an94.name = "AN94";
 	an94.type = "AR";
