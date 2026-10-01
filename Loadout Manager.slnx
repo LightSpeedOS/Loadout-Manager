@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Loadout Manager/Loadout Manager.vcxproj" Id="1d8e685d-b6fd-498c-ac40-dd98cbf22a78" />
+</Solution>
