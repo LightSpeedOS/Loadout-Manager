@@ -8,9 +8,8 @@ enum mainMenu
 	List = 1,
 	Equip,
 	Unequip,
-	Info,
 	Attach,
-	Remove,
+	View,
 	Quit
 };
 
@@ -20,6 +19,19 @@ enum weaponType
 	SMG,    // 1
 	Sniper, // 2
 	Pistol, // 3
+};
+
+struct Attachment
+{
+	string name;
+	vector<string> compatible;
+	int slots;
+
+	int agility;
+	int handling;
+	int accuracy;
+	int range;
+	int fireRate;
 };
 
 struct Weapon
@@ -34,6 +46,8 @@ struct Weapon
 	int accuracy;
 	int range;
 	int fireRate;
+
+	vector<Attachment> attached;
 
 	inline void display()
 	{
@@ -62,17 +76,4 @@ struct Weapon
 
 		getKey();
 	}
-};
-
-struct Attachment
-{
-	string name;
-	vector<string> compatible;
-	int slots;
-
-	int agility;
-	int handling;
-	int accuracy;
-	int range;
-	int fireRate;
 };
