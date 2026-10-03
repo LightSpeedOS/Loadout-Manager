@@ -13,6 +13,14 @@ enum mainMenu
 	Quit
 };
 
+enum weaponType
+{
+	AR,     // 0
+	SMG,    // 1
+	Sniper, // 2
+	Pistol, // 3
+};
+
 struct Attachment
 {
 	string name;

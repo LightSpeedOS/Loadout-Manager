@@ -208,6 +208,7 @@ inline const char* statColor(int value)
 inline void editAttachments(Weapon* current, vector<Attachment>& att)
 {
 	clear();
+	int index;
 	int displayNumber = 1;
 	int userChoice;
 
@@ -263,52 +264,10 @@ inline void editAttachments(Weapon* current, vector<Attachment>& att)
 			continue;
 		}
 
-		space();
-		cout << "[+] " << green << "Successfully " << reset << "Equipped " << compatibleAttachments[userChoice - 1]->name << " on " << current->name << endl;
+		cout << "[+] " << green << "Successfully " << reset << "Equipped " << compatibleAttachments[userChoice - 1]->name << endl;
 		current->attached.push_back(*compatibleAttachments[userChoice - 1]);
 		getKey();
 		break;
 	}
 
-}
-
-inline void viewLoadout(Weapon* current)
-{
-
-	if (current == nullptr)
-	{
-		cout << "[!] Equip a Weapon Before Viewing Loadout" << endl;
-		pause();
-		return;
-	}
-
-	cout << "=========LOADOUT=========" << endl;
-	space();
-
-	cout << "Weapon: " << current->name << endl;
-	cout << "Type: " << current->type << endl;
-	cout << "Damage: " << current->damage << endl;
-	
-	space();
-	cout << "------ATTACHMENTS--------" << endl;
-	space();
-
-	for (size_t i = 0; i < current->attached.size(); i++)
-	{
-		cout << "[" << i + 1 << "] " << current->attached[i].name << endl;
-	}
-	space();
-	cout << "Slots: " << current->attached.size() << " / " << current->slots << endl;
-	space();
-
-	cout << "---------STATS-----------" << endl;
-	space();
-
-	cout << "Agility: " << current->agility << endl;
-	cout << "Handling: " << current->handling << endl;
-	cout << "Accuracy: " << current->accuracy << endl;
-	cout << "Range: " << current->range << endl;
-	cout << "Fire Rate: " << current->fireRate << endl;
-
-	getKey();
 }

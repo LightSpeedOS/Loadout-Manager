@@ -15,6 +15,7 @@ auto main() -> int
 	vector<Weapon> weapons;
 
 	vector<Attachment> attachments;
+	vector<int>eAttachments;
 
 	setUpWeapons(weapons);
 	setUpAttachments(attachments);
@@ -60,14 +61,6 @@ auto main() -> int
 
 		case Attach:
 			editAttachments(currentWeapon, attachments);
-			break;
-
-		case View:
-			viewLoadout(currentWeapon);
-			break;
-
-		case Quit:
-			shutDown();
 			break;
 
 		}
